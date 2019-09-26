@@ -1,7 +1,7 @@
 About r-parameters
 ==================
 
-Home: https://CRAN.R-project.org/package=parameters
+Home: https://easystats.github.io/parameters/
 
 Package license: GPL-3
 
