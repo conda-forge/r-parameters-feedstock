@@ -1,4 +1,4 @@
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/parameters_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/parameters/parameters_{{ version }}.tar.gz
-  sha256: 27cba754e0e5e5e0d83c9552e1000f57afa65de1333e3e64b95ba70370a68ba5
+  sha256: b6072232e23c57f0894883c11db8b3a40e065703fa173bc2617004c0661c367e
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -40,15 +40,12 @@ test:
 about:
   home: https://CRAN.R-project.org/package=parameters
   license: GPL-3
-  summary: "Utilities for processing the parameters of various statistical models. Beyond computing
-    p values, CIs, and other indices for a wide variety of models (see support list
-    of insight; L\xFCdecke, Waggoner & Makowski (2019) <doi:10.21105/joss.01412>), this
-    package implements features like standardization or bootstrapping of parameters
-    and models, feature reduction (feature extraction and variable selection) as well
-    as conversion between indices of effect size."
+  summary: Utilities for processing the parameters of various statistical models. Beyond computing p values, CIs, and other indices for a wide variety of models (see
+    support list of insight; Lüdecke, Waggoner & Makowski (2019) <doi:10.21105/joss.01412>), this package implements features like standardization or bootstrapping
+    of parameters and models, feature reduction (feature extraction and variable selection) as well as conversion between indices of effect size.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
