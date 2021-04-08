@@ -1,4 +1,4 @@
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/parameters_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/parameters/parameters_{{ version }}.tar.gz
-  sha256: f5560a97287cad3a5c6e2bc7f834a8edcf6729f45009b55be597564c28b1d835
+  sha256: 01e110add2237076971c63d77197d3c4696e3588b25b126814dfd00c53e7b49d
 
 build:
   merge_build_host: true  # [win]
@@ -25,12 +25,12 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-bayestestr >=0.2.5
-    - r-insight >=0.4.1
+    - r-bayestestr >=0.8.2
+    - r-insight >=0.13.2
   run:
     - r-base
-    - r-bayestestr >=0.2.5
-    - r-insight >=0.4.1
+    - r-bayestestr >=0.8.2
+    - r-insight >=0.13.2
 
 test:
   commands:
@@ -39,7 +39,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=parameters
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Utilities for processing the parameters of various statistical models. Beyond computing p values, CIs, and other indices for a wide variety of models (see support list of insight; Lüdecke, Waggoner & Makowski (2019) <doi:10.21105/joss.01412>), this package implements features like standardization or bootstrapping
     of parameters and models, feature reduction (feature extraction and variable selection) as well as conversion between indices of effect size.
   license_family: GPL3
