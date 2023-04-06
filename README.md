@@ -1,11 +1,11 @@
-About r-parameters
-==================
+About r-parameters-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-parameters-feedstock/blob/main/LICENSE.txt)
 
 Home: https://easystats.github.io/parameters/
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-parameters-feedstock/blob/main/LICENSE.txt)
 
 Summary: Utilities for processing the parameters of various statistical models. Beyond computing p values, CIs, and other indices for a wide variety of models (see support list of insight; Lüdecke, Waggoner & Makowski (2019) <doi:10.21105/joss.01412>), this package implements features like standardization or bootstrapping of parameters and models, feature reduction (feature extraction and variable selection) as well as conversion between indices of effect size.
 
