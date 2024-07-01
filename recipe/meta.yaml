@@ -1,6 +1,5 @@
 {% set version = "0.22.0" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-parameters
@@ -13,8 +12,7 @@ source:
   sha256: e8276100aa0ff0512e5c8e598560d47bf97a994347dc42fd9b59e5bdabd3e3a5
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
