@@ -1,4 +1,4 @@
-{% set version = "0.24.2" %}
+{% set version = "0.25.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/parameters_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/parameters/parameters_{{ version }}.tar.gz
-  sha256: d87105ce6fb3aff2648b1d3ed5716eaa81b9683425ae5d8ffea698e83f09d7c3
+  sha256: 45c8946436f610a3c411c58ee0cdbe79356ea1f1eea71fedf06b41ea00b17b60
 
 build:
   number: 0
@@ -21,16 +21,17 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-bayestestr >=0.13
-    - r-datawizard >=0.6.5
-    - r-insight >=0.18.8
+    - r-bayestestr >=0.15.2
+    - r-datawizard >=1.0.2
+    - r-insight >=1.2.0
   run:
     - r-base
-    - r-bayestestr >=0.13
-    - r-datawizard >=0.6.5
-    - r-insight >=0.18.8
+    - r-bayestestr >=0.15.2
+    - r-datawizard >=1.0.2
+    - r-insight >=1.2.0
 
 test:
   commands:
