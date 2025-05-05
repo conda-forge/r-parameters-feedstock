@@ -21,16 +21,17 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-bayestestr >=0.13
-    - r-datawizard >=0.6.5
-    - r-insight >=0.18.8
+    - r-bayestestr >=0.15.2
+    - r-datawizard >=1.0.2
+    - r-insight >=1.2.0
   run:
     - r-base
-    - r-bayestestr >=0.13
-    - r-datawizard >=0.6.5
-    - r-insight >=0.18.8
+    - r-bayestestr >=0.15.2
+    - r-datawizard >=1.0.2
+    - r-insight >=1.2.0
 
 test:
   commands:
