@@ -1,4 +1,4 @@
-{% set version = "0.28.3" %}
+{% set version = "0.29.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/parameters_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/parameters/parameters_{{ version }}.tar.gz
-  sha256: ec55f8704ad06ac5aad8dcc67241e37167e3866440d63bfe1c1d95b44df03235
+  sha256: 451b39fb299316cdf1c81bffc94f9455210d495d6f2cbdc4f5cddc526eb43ef5
 
 build:
   number: 0
@@ -43,8 +43,8 @@ about:
   dev_url: https://github.com/easystats/parameters/
   doc_url: https://easystats.github.io/parameters/reference/
   license: GPL-3.0-only
-  summary: Utilities for processing the parameters of various statistical models. Beyond computing p values, CIs, and other indices for a wide variety of models (see support list of insight; Lüdecke, Waggoner & Makowski (2019) <doi:10.21105/joss.01412>), this package implements features like standardization or bootstrapping
-    of parameters and models, feature reduction (feature extraction and variable selection) as well as conversion between indices of effect size.
+  summary: Utilities for processing the parameters of various statistical models. Beyond computing p values, CIs, and other indices for a wide variety of models (see support list of insight; Lüdecke, Waggoner & Makowski (2019) <doi:10.21105/joss.01412>), this package implements features like standardization or 
+    bootstrapping of parameters and models, feature reduction (feature extraction and variable selection) as well as conversion between indices of effect size.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
